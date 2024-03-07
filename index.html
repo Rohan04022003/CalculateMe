@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="calculatorFavicon.webp" type="image/x-icon">
+    <title>Calculate Me!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <section>
+      <h2>Calculate Me!</h2>
+
+      <div id="main">
+        <input type="text" placeholder="0" id="result" />
+        <div id="row">
+          <button id="backSpace" onclick="backSpaceValue()">
+            <span class="material-symbols-outlined"> backspace </span>
+          </button>
+          <button id="clear" onclick="allClear()">AC</button>
+          <button id="modulus" onclick="appendToValue('%')">%</button>
+          <button onclick="appendToValue('/')">&div;</button>
+        </div>
+        <div id="row">
+          <button onclick="appendToValue('7')">7</button>
+          <button onclick="appendToValue('8')">8</button>
+          <button onclick="appendToValue('9')">9</button>
+          <button onclick="appendToValue('*')">&times;</button>
+        </div>
+        <div id="row">
+          <button onclick="appendToValue('4')">4</button>
+          <button onclick="appendToValue('5')">5</button>
+          <button onclick="appendToValue('7')">7</button>
+          <button onclick="appendToValue('-')">&minus;</button>
+        </div>
+        <div id="row">
+          <button onclick="appendToValue('1')">1</button>
+          <button onclick="appendToValue('2')">2</button>
+          <button onclick="appendToValue('3')">3</button>
+          <button onclick="appendToValue('+')">&plus;</button>
+        </div>
+
+        <div id="row">
+          <button class="zero" onclick="appendToValue('0')">0</button>
+          <button class="dot" onclick="appendToValue('.')">.</button>
+          <button class="equal" onclick="calculate()">=</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
